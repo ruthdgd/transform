@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+figure{
+    height: 400px;
+    width: 300px;
+    position: relative;
+    background: violet;
+}
+.buttons{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2rem;
+}
+.buttons_item{
+    display: inline-block;
+    background-color: blueviolet;
+    color: aliceblue;
+    padding: 2.5rem 4rem;
+    transition-property: background-color, transform;
+    transition-duration: .8s;
+}
+.buttons_item:hover{
+    background-color: orangered;
+    transform: scale(1.2);
+}
+img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:-15%;
+    margin: auto;
+    width: 130%;
+    max-width: 300px;
+    opacity: 0;
+    transform: rotate(180deg) scale(.2);
+    transition-property: opacity, transform;
+    transition-duration: 2s;
+}
+img[id]:target{
+    opacity: 1;
+    transform: scale(1) rotate(0);
+}
